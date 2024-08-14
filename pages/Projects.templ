@@ -1,0 +1,33 @@
+package pages
+
+
+import (
+  "GoWeb/pages/layout"
+  "io"
+  "context"
+)
+
+func Unsafe(html string) templ.Component {
+	return templ.ComponentFunc(func(ctx context.Context, w io.Writer) (err error) {
+		_, err = io.WriteString(w, html)
+		return
+	})
+}
+
+func body(buf string) templ.Component{
+  return Unsafe(buf);
+}
+
+templ Page(){
+  <!DOCTYPE html>
+
+  <html lang="en">
+  @PageTemplateHead("Projects")
+  @layout.Navbar()
+  @PageTemplateBody(Unsafe("<p> hey</p>"))
+  </html>
+}
+
+templ Projects() {
+  @Page()
+}

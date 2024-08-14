@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+
+WebPageDir="./pages"
+GoMain="./src/main.go"
+BinDir="./bin"
+
+
