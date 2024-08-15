@@ -73,7 +73,7 @@ func Navbar() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</b></a> <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\"><span class=\"navbar-toggler-icon\"></span></button><div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\"><ul class=\"navbar-nav me-auto mb-2 mb-lg-0\"><li class=\"nav-item\"><a class=\"nav-link active nav-text\" aria-current=\"page\" href=\"/\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</b></a> <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\"><span class=\"navbar-toggler-icon\"></span></button><div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\"><ul class=\"navbar-nav me-auto mb-2 mb-lg-0\"><li class=\"nav-item\"><a class=\"nav-link active nav-text\" aria-current=\"page\" href=\"/\"><img class=\"img-icon\" src=\"/wwwroot/images/icons/house.png\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -81,7 +81,7 @@ func Navbar() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</a></li><li class=\"nav-item\"><a class=\"nav-link nav-text\" href=\"/Projects\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</a></li><li class=\"nav-item\"><a class=\"nav-link nav-text\" href=\"/Projects\"><img class=\"img-icon\" src=\"/wwwroot/images/icons/projects.png\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -89,7 +89,7 @@ func Navbar() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</a></li><li class=\"nav-item dropdown\"><a class=\"nav-link nav-text dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</a></li><li class=\"nav-item dropdown\"><a class=\"nav-link nav-text dropdown-toggle\" href=\"/Blog\" id=\"navbarDropdown\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><img class=\"img-icon\" src=\"/wwwroot/images/icons/blog.png\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -97,7 +97,7 @@ func Navbar() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</a><ul class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\"><li><a class=\"dropdown-item\" href=\"#\">Action</a></li><li><a class=\"dropdown-item\" href=\"\">Another action</a></li><li><hr class=\"dropdown-divider\"></li><li><a class=\"dropdown-item\" href=\"#\">Something else here</a></li></ul></li></ul><form class=\"d-flex\" action=\"/\" method=\"POST\"><input class=\"form-control me-2\" type=\"search\" name=\"search\" placeholder=\"Search\" aria-label=\"Search\"> <button class=\"btn btn-outline-success\" type=\"submit\">Search</button></form></div></div></nav>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</a><ul class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\"><li><a class=\"dropdown-item\" href=\"/Blog\">General</a></li><li><a class=\"dropdown-item\" href=\"/Blog/STEM\">STEM</a></li><li><a class=\"dropdown-item\" href=\"/ErrorPage\">Photos</a></li><li><hr class=\"dropdown-divider\"></li><li><a class=\"dropdown-item\" href=\"/Blog\"><img class=\"img-icon\" src=\"/wwwroot/images/icons/red-panda-sat.png\"></a></li></ul></li></ul><form class=\"d-flex\" action=\"/\" method=\"POST\"><input class=\"form-control me-2\" type=\"search\" name=\"search\" placeholder=\"Search\" aria-label=\"Search\"> <button class=\"btn btn-outline-success\" type=\"submit\">Search</button></form></div></div></nav>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

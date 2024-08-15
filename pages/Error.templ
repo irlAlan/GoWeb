@@ -1,0 +1,12 @@
+package pages
+
+import "GoWeb/pages/layout"
+
+
+// Could probably add a builder func that handles all the string stuff so i just need to Unsafe it here
+templ ErrorPage(){
+  @layout.PageTemplateHead("ERROR")
+  @layout.PageTemplateBody(Unsafe(
+    "<h1>404</h1>",
+    "<p>Cannot Use this link</p>"))
+}

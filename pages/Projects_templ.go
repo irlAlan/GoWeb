@@ -14,15 +14,19 @@ import (
 	"io"
 )
 
-func Unsafe(html string) templ.Component {
+func Unsafe(html ...string) templ.Component {
 	return templ.ComponentFunc(func(ctx context.Context, w io.Writer) (err error) {
-		_, err = io.WriteString(w, html)
+		ht := ""
+		for _, j := range html {
+			ht += j
+		}
+		_, err = io.WriteString(w, ht)
 		return
 	})
 }
 
-func body(buf string) templ.Component {
-	return Unsafe(buf)
+func body(buf string) string {
+	return buf
 }
 
 func Page() templ.Component {
@@ -47,7 +51,7 @@ func Page() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = PageTemplateHead("Projects").Render(ctx, templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = layout.PageTemplateHead("Projects").Render(ctx, templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -55,7 +59,11 @@ func Page() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = PageTemplateBody(Unsafe("<p> hey</p>")).Render(ctx, templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = layout.PageTemplateBody(Unsafe(
+			`
+    <h1>This is a page dedicated top the projects ive done</h1>
+    <p>Hoyde hoy lad</p>
+  `)).Render(ctx, templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

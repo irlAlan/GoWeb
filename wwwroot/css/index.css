@@ -1,0 +1,13 @@
+.img-icon {
+  height: 30px;
+  width: auto;
+}
+
+.navbar-toggler:hover, .navbar-brand:hover, .nav-link:hover, .dropdown-menu{
+    background-color: #F25757;
+}
+
+.nav-link, .navbar-brand{
+    border-radius: 10px;
+    padding: 5px;
+}
