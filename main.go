@@ -74,12 +74,12 @@ func main(){
     }
   })
 
-   http.Handle("/Projects", templ.Handler(pages.Projects()));
-   http.Handle("/Blog", templ.Handler(blog.BlogPage()));
-   http.Handle("/Blog/STEM/", templ.Handler(stem.StemPage()));
-   http.Handle("/Blog/STEM/PDFS", templ.Handler(stem.StemPdfPage()))
+   http.Handle("/projects", templ.Handler(pages.Projects()));
+   http.Handle("/blog", templ.Handler(blog.BlogPage()));
+   http.Handle("/blog/stem/", templ.Handler(stem.StemPage()));
+   http.Handle("/blog/stem/pdfs", templ.Handler(stem.StemPdfPage()))
    http.Handle("/ErrorPage", templ.Handler(pages.ErrorPage()))
-   http.Handle("/ContactMe", templ.Handler(pages.ContactMe()))
+   http.Handle("/contactme", templ.Handler(pages.ContactMe()))
   //http.HandleFunc("/Project", handleProjects);
   log.Println("Listening on port " + port);
   log.Fatal(http.ListenAndServe(":"+port, nil));
