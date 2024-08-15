@@ -21,10 +21,10 @@ func postHandleSearch(w http.ResponseWriter, r *http.Request){
 
   redirect := ""
   switch srch{
-  case "Projects": redirect = "/Projects"
+  case "Projects": redirect = "/projects"
   case "Home" : redirect = "/"
-  case "Blog" : redirect = "/Blog"
-  default: log.Fatal("ERROR: Cannot search for path");
+  case "Blog" : redirect = "/blog"
+  default: redirect="/ErrorPage";
   }
 
   fmt.Println("Redirect: " + redirect);
