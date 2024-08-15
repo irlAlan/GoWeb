@@ -40,7 +40,13 @@ func StemPage() templ.Component {
 		templ_7745c5c3_Err = layout.PageTemplateBody(pages.Unsafe(
 			`
     <h1>Stem Blog</h1>
-    <h3>This is a page dedicated to all things STEM that I find interesting and want to talk about or show others.</h3>
+    <hr/>
+    <h4>This is a page dedicated to all things STEM that I find interesting and want to talk about or show others.</h4>
+
+    <!--Show Stem PDFS-->
+    <hr/>
+    <a href="/Blog/STEM/PDFS"><h3>Cool STEM PDF's</h3></a>
+    <embed class="pdf"  width="800px" height="1000px" src="/Blog/STEM/PDFS"/>
   `)).Render(ctx, templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err

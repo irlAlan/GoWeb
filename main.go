@@ -9,7 +9,6 @@ import (
 	pages "GoWeb/pages"
   "GoWeb/pages/blog/stem"
   "GoWeb/pages/blog"
-//	"GoWeb/pages/layout"
 
 	"github.com/a-h/templ"
 	// "os"
@@ -56,7 +55,7 @@ func main(){
 //    templ.Execute(writer, nil);
 //  }
 
-  port := "8080";
+  port := "8001";
   fileServer := http.FileServer(http.Dir("./wwwroot"));
   http.Handle("/wwwroot/*", http.StripPrefix("/wwwroot/", fileServer));
   // http.Handle("/alan", templ.Handler(pages.Index()));
@@ -77,7 +76,8 @@ func main(){
 
    http.Handle("/Projects", templ.Handler(pages.Projects()));
    http.Handle("/Blog", templ.Handler(blog.BlogPage()));
-   http.Handle("/Blog/STEM/*", templ.Handler(stem.StemPage()));
+   http.Handle("/Blog/STEM/", templ.Handler(stem.StemPage()));
+   http.Handle("/Blog/STEM/PDFS", templ.Handler(stem.StemPdfPage()))
    http.Handle("/ErrorPage", templ.Handler(pages.ErrorPage()))
   //http.HandleFunc("/Project", handleProjects);
   log.Println("Listening on port " + port);

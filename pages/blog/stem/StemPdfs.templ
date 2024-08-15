@@ -1,0 +1,30 @@
+package stem
+
+import "GoWeb/pages/layout"
+import "GoWeb/pages"
+
+func getPDFS() string {
+  return "/wwwroot/pdfs/EngineeringDynamics7ed.pdf"
+}
+
+
+
+templ StemPdfPage(){
+  @layout.PageTemplateHead("Stem PDF's")
+  @layout.Navbar()
+  @layout.PageTemplateBody(pages.Unsafe(
+  `
+    <h1>Stem PDF's</h1>
+    <hr/>
+    <h4>This is a page dedicated to all STEM PDF's that I've found and want others to use and Download.</h4>
+
+    <!--Show Stem PDFS-->
+    <hr/>
+    <h2> Free Online STEM PDF's: </h2>
+    <embed class="pdf" src="/wwwroot/pdfs/EngineeringDynamics7ed.pdf" width="800px" height="1000px"/>
+    <embed class="pdf" src="/wwwroot/pdfs/LinearAlgebra.pdf" width="800px" height="1000px"/>
+    <embed class="pdf" src="/wwwroot/pdfs/Thomas_Calculus.pdf" width="800px" height="1000px" />
+    <embed class="pdf" src="/wwwroot/pdfs/learnOpengl.pdf" width="800px" height="1000px" />
+    <embed class="pdf" src="/wwwroot/pdfs/GameEngineDesign.pdf" width="800px" height="1000px" />
+  `))
+}
