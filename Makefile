@@ -1,4 +1,5 @@
 run: build
+	./bin/main
 
 build: main.go
-	./templ generate; go build -o ./bin
+	./bin/templ generate; go build -o ./bin main.go

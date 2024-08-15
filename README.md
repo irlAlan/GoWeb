@@ -15,6 +15,17 @@ that it was a simple language to learn and use with great tooling for these kind
 
 golang, [net/http](https://pkg.go.dev/net/http),  [templ](https://github.com/a-h/templ)
 
+## Current Work flow
+
+To build and run:
+`make run`
+
+To build:
+`make build`
+
+or to handle manually use the commad `templ generate` through the `templ` binary in the bin folder to compile the *.templ files into *_templ.go files
+then run `go build -o bin/ main.go` to create the main binary in the bin folder, which you can then execute to run the website.
+
 # TOOD:
 
 - Refactor internal url names
