@@ -33,7 +33,7 @@ func nav_text(text string) templ.Component {
 		var templ_7745c5c3_Var2 string
 		templ_7745c5c3_Var2, templ_7745c5c3_Err = templ.JoinStringErrs(text)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `pages/layout/Header.templ`, Line: 5, Col: 34}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `layout/Header.templ`, Line: 5, Col: 34}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var2))
 		if templ_7745c5c3_Err != nil {
@@ -97,7 +97,15 @@ func Navbar() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</a><ul class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\"><li><a class=\"dropdown-item\" href=\"/Blog\">General</a></li><li><a class=\"dropdown-item\" href=\"/Blog/STEM\">STEM</a></li><li><a class=\"dropdown-item\" href=\"/ErrorPage\">Photos</a></li><li><hr class=\"dropdown-divider\"></li><li><a class=\"dropdown-item\" href=\"/Blog\"><img class=\"img-icon\" src=\"/wwwroot/images/icons/red-panda-sat.png\"></a></li></ul></li></ul><form class=\"d-flex\" action=\"/\" method=\"POST\"><input class=\"form-control me-2\" type=\"search\" name=\"search\" placeholder=\"Search\" aria-label=\"Search\"> <button class=\"btn btn-outline-success\" type=\"submit\">Search</button></form></div></div></nav>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</a><ul class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\"><li><a class=\"dropdown-item\" href=\"/Blog\">General</a></li><li><a class=\"dropdown-item\" href=\"/Blog/STEM\">STEM</a></li><li><a class=\"dropdown-item\" href=\"/ErrorPage\">Photos</a></li><li><hr class=\"dropdown-divider\"></li><li><a class=\"dropdown-item\" href=\"/Blog\"><img class=\"img-icon\" src=\"/wwwroot/images/icons/red-panda-sat.png\"></a></li></ul></li></ul><li class=\"nav-item\"><a class=\"nav-link nav-text\" href=\"/ContactMe\"><img class=\"img-icon\" src=\"/wwwroot/images/icons/projects.png\">")
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		templ_7745c5c3_Err = nav_text("Contact Me").Render(ctx, templ_7745c5c3_Buffer)
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</a></li><form class=\"d-flex\" action=\"/\" method=\"POST\"><input class=\"form-control me-2\" type=\"search\" name=\"search\" placeholder=\"Search\" aria-label=\"Search\"> <button class=\"btn btn-outline-success\" type=\"submit\">Search</button></form></div></div></nav>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

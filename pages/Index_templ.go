@@ -9,8 +9,8 @@ import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
 import (
-	"GoWeb/pages/layout"
 	pages "GoWeb/pages/layout"
+	// "GoWeb/pages/layout"
 )
 
 func hello(name string) templ.Component {
@@ -38,7 +38,7 @@ func hello(name string) templ.Component {
 		var templ_7745c5c3_Var2 string
 		templ_7745c5c3_Var2, templ_7745c5c3_Err = templ.JoinStringErrs(name)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `pages/Index.templ`, Line: 9, Col: 18}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `Index.templ`, Line: 9, Col: 18}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var2))
 		if templ_7745c5c3_Err != nil {
@@ -81,15 +81,7 @@ func Index() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<body style=\"background-color: #AAAAAA;\"><main class=\"container\"><div><div class=\"container\"><div class=\"wrapper\"><header class=\"inner index\" style=\"width: fit-content\"><h1 class=\"fw-bold\">Hey there, its me Alan</h1></header><div style=\"width: fit-content;\"><p class=\"inner-description\" style=\"font-size: 20px;\">I'm a second year student at Aberystwyth University studying Robotics and Embedded Systems Engineering.<br><br>The main languages I use are C++, C, C#, Java, Go-lang and Python for automative scripts. I've also tried using rust and zig. You can view the projects i've made <a href=\"/Projects\">here</a> Including how I made this website which, fun fact, was initially made using C# and  Blazor WASM with Nginx as a reverse-proxy😀 , re-written using Go-lang as a web-server and templ + Htmx for the frontend.</p></div></div></div></div><div class=\"tenor-gif-embed\" data-postid=\"17691199049790448563\" data-share-method=\"host\" data-aspect-ratio=\"1.2973\" data-width=\"40%\"><button onClick=\"window.location.reload();\">Refresh Page</button> <a href=\"https://tenor.com/view/wtf-gif-17691199049790448563\">Wtf GIF</a>from  <a href=\"https://tenor.com/search/wtf-gifs\">Wtf GIFs</a></div><script type=\"text/javascript\" async src=\"https://tenor.com/embed.js\"></script></main>")
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		templ_7745c5c3_Err = layout.Footer().Render(ctx, templ_7745c5c3_Buffer)
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<!--script src=\"/wwwroot/scripts/bootstrap/bootstrap.min.js\"></script--><script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM\" crossorigin=\"anonymous\"></script></body></html>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<body style=\"background-color: #AAAAAA;\"><main class=\"container\"><div><div class=\"container\"><div class=\"wrapper\"><header class=\"inner index\" style=\"width: fit-content\"><h1 class=\"fw-bold\">Hey there, its me Alan</h1></header><div style=\"width: fit-content;\"><p class=\"inner-description\" style=\"font-size: 20px;\">I'm a second year student at Aberystwyth University studying Robotics and Embedded Systems Engineering.<br><br>The main languages I use are C++, C, C#, Java, Go-lang and Python for automative scripts. I've also tried using rust and zig. You can view the projects i've made <a href=\"/Projects\">here</a> Including how I made this website which, fun fact, was initially made using C# and  Blazor WASM with Nginx as a reverse-proxy😀 , re-written using Go-lang as a web-server and templ + Htmx for the frontend.</p></div></div></div></div><div class=\"tenor-gif-embed\" data-postid=\"17691199049790448563\" data-share-method=\"host\" data-aspect-ratio=\"1.2973\" data-width=\"40%\"><button onClick=\"window.location.reload();\">Refresh Page</button> <a href=\"https://tenor.com/view/wtf-gif-17691199049790448563\">Wtf GIF</a>from  <a href=\"https://tenor.com/search/wtf-gifs\">Wtf GIFs</a></div><script type=\"text/javascript\" async src=\"https://tenor.com/embed.js\"></script></main><!--script src=\"/wwwroot/scripts/bootstrap/bootstrap.min.js\"></script--><script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM\" crossorigin=\"anonymous\"></script></body></html>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

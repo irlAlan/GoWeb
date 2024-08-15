@@ -56,7 +56,7 @@ func main(){
 //  }
 
   port := "8000";
-  fileServer := http.FileServer(http.Dir("home/ubuntu/GoWeb/wwwroot"));
+  fileServer := http.FileServer(http.Dir("../GoWeb/wwwroot"));
   http.Handle("/wwwroot/*", http.StripPrefix("/wwwroot/", fileServer));
   // http.Handle("/alan", templ.Handler(pages.Index()));
 
@@ -79,6 +79,7 @@ func main(){
    http.Handle("/Blog/STEM/", templ.Handler(stem.StemPage()));
    http.Handle("/Blog/STEM/PDFS", templ.Handler(stem.StemPdfPage()))
    http.Handle("/ErrorPage", templ.Handler(pages.ErrorPage()))
+   http.Handle("/ContactMe", templ.Handler(pages.ContactMe()))
   //http.HandleFunc("/Project", handleProjects);
   log.Println("Listening on port " + port);
   log.Fatal(http.ListenAndServe(":"+port, nil));
