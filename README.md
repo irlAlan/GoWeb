@@ -11,6 +11,10 @@ development I realised I didnt like how clunky and dependancy heavy the process 
 So after mulling over my feelings I decided to use this as an opportunity to rewrite my website and learn about golang whilst doing so as I was already intrested in learning it and heard 
 that it was a simple language to learn and use with great tooling for these kinds of projects.
 
+
+You can view a Blog about the creation of the website here: [blog](https://irlalan.net/blog/stem/website_creation)
+If its blank I havn't added it yet.
+
 ## Dependancies used
 
 golang, [net/http](https://pkg.go.dev/net/http),  [templ](https://github.com/a-h/templ)
