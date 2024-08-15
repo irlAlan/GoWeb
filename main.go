@@ -55,13 +55,8 @@ func main(){
 //    templ.Execute(writer, nil);
 //  }
 
-<<<<<<< HEAD
-  port := "8001";
-  fileServer := http.FileServer(http.Dir("./wwwroot"));
-=======
   port := "8000";
-  fileServer := http.FileServer(http.Dir("/home/ubuntu/GoWeb/wwwroot"));
->>>>>>> 4e950ecf029f02167b36e3961d40d4ac0d7c3e28
+  fileServer := http.FileServer(http.Dir("../GoWeb/wwwroot"));
   http.Handle("/wwwroot/*", http.StripPrefix("/wwwroot/", fileServer));
   // http.Handle("/alan", templ.Handler(pages.Index()));
 

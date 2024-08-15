@@ -2,6 +2,7 @@ package pages
 
 import (
   pages "GoWeb/pages/layout"
+	"GoWeb/pages/layout"
 )
 
 templ hello(name string){
@@ -27,7 +28,7 @@ templ Index(){
 
       <!--link rel="stylesheet" type="text/css" href="/wwwrooot/css/index.css"/-->
       <!--script src="static/scripts/htmx.min.js"></script-->
-      <title>Test</title>
+      <title>Alan</title>
     </head>
 
     @pages.Navbar()
@@ -70,8 +71,10 @@ templ Index(){
 
 
 
+      @layout.Footer()
       <!--script src="/wwwroot/scripts/bootstrap/bootstrap.min.js"></script-->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </body>
+
   </html>
 }
