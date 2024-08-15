@@ -56,7 +56,7 @@ func main(){
 //    templ.Execute(writer, nil);
 //  }
 
-  port := "8080";
+  port := "8000";
   fileServer := http.FileServer(http.Dir("./wwwroot"));
   http.Handle("/wwwroot/*", http.StripPrefix("/wwwroot/", fileServer));
   // http.Handle("/alan", templ.Handler(pages.Index()));
