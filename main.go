@@ -56,7 +56,7 @@ func main(){
 //  }
 
   port := "8000";
-  fileServer := http.FileServer(http.Dir("../GoWeb/wwwroot"));
+  fileServer := http.FileServer(http.Dir("home/ubuntu/GoWeb/wwwroot"));
   http.Handle("/wwwroot/*", http.StripPrefix("/wwwroot/", fileServer));
   // http.Handle("/alan", templ.Handler(pages.Index()));
 
