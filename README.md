@@ -12,7 +12,7 @@ So after mulling over my feelings I decided to use this as an opportunity to rew
 that it was a simple language to learn and use with great tooling for these kinds of projects.
 
 
-You can view a Blog about the creation of the website here: [blog](https://irlalan.net/blog/stem/website_creation)
+You can view a Blog about the creation of the website here: [blog](https://irlalan.net/projects/website_creation)
 If its blank I havn't added it yet.
 
 ## Dependancies used

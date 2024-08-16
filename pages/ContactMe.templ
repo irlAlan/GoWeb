@@ -1,6 +1,43 @@
 package pages
 
+import (
+  "GoWeb/pages/layout"
+)
 
 templ ContactMe(){
-  <p> contact me </p>
+  @layout.PageTemplateHead("ContactMe")
+  @layout.Navbar()
+  @layout.PageTemplateBody(Unsafe(
+  `
+    <h2> Contact me </h2>
+
+    <main class="container" style="justify-content: center;">
+    <div class="container">
+        <!--a href="https://discordapp.com/channels/@rl/#5632/" target="_blank">
+          <h4>Discord:</h4>
+          <img class="foot-img" src="/wwwroot/images/logos/footer_logos/discord_small_logo_blurple.png"/>
+        </a-->
+
+        <a href="https://github.com/irlAlan" target="_blank">
+          <h4>github:</h4>
+          <img class="foot-img" src="/wwwroot/images/logos/footer_logos/github_mark.png"/>
+        </a>
+
+        <a href="https://www.instagram.com/aln2045/" target="_blank">
+          <h4>Instagram:</h4>
+          <img class="foot-img"src="/wwwroot/images/logos/footer_logos/instagram_Glyph_Gradient.png"/>
+        </a>
+
+        <a href="https://www.linkedin.com/in/alan-selormey-1319a72b9" target="_blank">
+          <h4>Linkdn:</h4>
+          <img class="foot-img" src="/wwwroot/images/logos/footer_logos/linkdn_In_Bug.png"/>
+        </a>
+
+      <p>Mabe using golang and templ</p>
+      <p>2024 Alan</p>
+    </div>
+    </main>
+     
+  `))
+  
 }
