@@ -9,6 +9,8 @@
 *.dylib
 *_templ.go
 
+build/
+.old/
 # Test binary, built with `go test -c`
 *.test
 
