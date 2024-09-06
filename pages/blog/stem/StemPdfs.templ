@@ -20,11 +20,18 @@ templ StemPdfPage(){
 
     <!--Show Stem PDFS-->
     <hr/>
-    <h2> Free Online STEM PDF's: </h2>
-    <embed class="pdf" src="/wwwroot/pdfs/EngineeringDynamics7ed.pdf" width="800px" height="1000px"/>
+    <h2> Online STEM PDF's: </h2>
+
+    <object data="/wwwroot/pdfs/Thomas_Calculus.pdf" type="application/pdf" width="100%" height="100%">
+      <p>Your web browser doesn't have a PDF plugin.
+      Instead you can <a href="filename.pdf">click here to
+      download the PDF file.</a></p>
+    </object>
+
+    <!--embed class="pdf" src="/wwwroot/pdfs/EngineeringDynamics7ed.pdf" width="800px" height="1000px"/>
     <embed class="pdf" src="/wwwroot/pdfs/LinearAlgebra.pdf" width="800px" height="1000px"/>
     <embed class="pdf" src="/wwwroot/pdfs/Thomas_Calculus.pdf" width="800px" height="1000px" />
     <embed class="pdf" src="/wwwroot/pdfs/learnOpengl.pdf" width="800px" height="1000px" />
-    <embed class="pdf" src="/wwwroot/pdfs/GameEngineDesign.pdf" width="800px" height="1000px" />
+    <embed class="pdf" src="/wwwroot/pdfs/GameEngineDesign.pdf" width="800px" height="1000px" /-->
   `))
 }
