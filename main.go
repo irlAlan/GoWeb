@@ -5,6 +5,7 @@ import (
 	//	"html/template"
 	"log"
 	"net/http"
+  "strings"
 
 	pages "GoWeb/pages"
   "GoWeb/pages/blog/stem"
@@ -18,6 +19,7 @@ import (
 func postHandleSearch(w http.ResponseWriter, r *http.Request){
   srch := r.PostFormValue("search");
   fmt.Println("Search: " + srch);
+  srch = strings.ToLower(srch);
 
   redirect := ""
   switch srch{
@@ -56,7 +58,7 @@ func main(){
 //  }
 
   port := "8000";
-  fileServer := http.FileServer(http.Dir("../GoWeb/wwwroot"));
+  fileServer := http.FileServer(http.Dir("/home/ubuntu/GoWeb/wwwroot"));
   http.Handle("/wwwroot/*", http.StripPrefix("/wwwroot/", fileServer));
   // http.Handle("/alan", templ.Handler(pages.Index()));
 
