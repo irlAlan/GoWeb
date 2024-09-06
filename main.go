@@ -23,16 +23,10 @@ func postHandleSearch(w http.ResponseWriter, r *http.Request){
 
   searchResults := map[string]string{
     "projects" : "/projects",
-    "perfect" : "/blog",
     "home" : "/",
     "blog" : "/blog",
     "default" : "/ErrorPage",
   };
-
-  keys := make([]string, 0, len(searchResults))
-  for k := range searchResults {
-    keys = append(keys, k)
-  }
 
   for key,redirect := range searchResults{
     if(strings.Contains(key,srch)){
