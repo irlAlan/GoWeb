@@ -18,21 +18,30 @@ import (
 
 func postHandleSearch(w http.ResponseWriter, r *http.Request){
   srch := r.PostFormValue("search");
-  fmt.Println("Search: " + srch);
+  // fmt.Println("Search: " + srch);
   srch = strings.ToLower(srch);
 
-  redirect := ""
-  switch srch{
-  case "Projects": redirect = "/projects"
-  case "Home" : redirect = "/"
-  case "Blog" : redirect = "/blog"
-  default: redirect="/ErrorPage";
+  searchResults := map[string]string{
+    "projects" : "/projects",
+    "perfect" : "/blog",
+    "home" : "/",
+    "blog" : "/blog",
+    "default" : "/ErrorPage",
+  };
+
+  keys := make([]string, 0, len(searchResults))
+  for k := range searchResults {
+    keys = append(keys, k)
   }
 
-  fmt.Println("Redirect: " + redirect);
-  http.Redirect(w,r,redirect,http.StatusSeeOther);
-   // component := pages.Page("from projects search");
-   // component.Render(r.Context(), w);
+  for key,redirect := range searchResults{
+    if(strings.Contains(key,srch)){
+      // fmt.Println("Redirect: " + redirect);
+      http.Redirect(w,r,redirect,http.StatusSeeOther);
+    }else{
+      http.Redirect(w,r,"/ErrorPage",http.StatusSeeOther);
+    }
+  }
 }
 
 
@@ -67,7 +76,7 @@ func main(){
       postHandleSearch(w,r);
       return
     }
-    fmt.Println("is going to index");
+    // fmt.Println("is going to index");
     if r.Method == http.MethodGet{
       // http.Handle("/", templ.Handler(pages.Index()));
       component := pages.Index();
