@@ -30,8 +30,44 @@ templ Page(){
   @layout.Navbar()
   @layout.PageTemplateBody(Unsafe(
   `
-    <h1>This is a page dedicated top the projects ive done</h1>
-    <p>Hoyde hoy lad</p>
+    <h1>This is a page dedicated to the projects I've done</h1>
+
+	<main class="container">
+	<div class="row">
+	  <div class="col-sm-6">
+	    <div class="card text-white bg-secondary mb-3">
+	      <div class="card-body">
+		<h5 class="card-title">gcreate</h5>
+		<p class="card-text">A build-tool made in go-lang to handle creating and managing c/c++ projects.</p>
+		<a href="https://github.com/irlalan/gcreate" class="btn btn-primary">project repo</a>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="col-sm-6">
+	    <div class="card text-white bg-secondary mb-3">
+	      <div class="card-body">
+		<h5 class="card-title">Conway's game of life</h5>
+		<p class="card-text">My own try at making a cellular automota, trying to make it seemlessly switch between conways game of life and lenia.</p>
+		<a href="https://github.com/irlalan/cel_autom" class="btn btn-primary">project repo</a>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+
+	<div class="col-sm-6">
+	    <div class="card text-white bg-secondary mb-3">
+	      <div class="card-body">
+		<h5 class="card-title">Voxel Engine</h5>
+		<p class="card-text">My own try at making a Voxel Engine.</p>
+		<a href="https://github.com/irlalan/VoxelEngine" class="btn btn-primary">project repo</a>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	</main>
+
   `))
   </html>
 }
